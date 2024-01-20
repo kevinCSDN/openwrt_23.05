@@ -16,7 +16,7 @@
 #sed -i '/routing/s/^/#/' feeds.conf.default
 #sed -i '/packages/s/^/#/' feeds.conf.default
 
-sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+#sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 #sed -i '$a src-git lede_luci https://github.com/coolsnowwolf/luci' feeds.conf.default
 #sed -i '$a src-git packages https://github.com/coolsnowwolf/packages' feeds.conf.default
 #sed -i '$a src-git luci https://github.com/coolsnowwolf/luci' feeds.conf.default
@@ -46,8 +46,8 @@ sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf
 
 git clone https://github.com/kiddin9/openwrt-packages
 shopt -s extglob
-rm -rf openwrt-packages/!(luci-app-netdata|luci-app-fullconenat|fullconenat)
-cp -r openwrt-packages/{luci-app-netdata,luci-app-fullconenat,fullconenat} package/
+rm -rf openwrt-packages/!(luci-app-netdata|luci-app-smartdns|luci-app-upnp)
+cp -r openwrt-packages/{luci-app-netdata,luci-app-smartdns,luci-app-upnp} package/
 rm -rf openwrt-packages
 
 #git clone https://github.com/coolsnowwolf/luci luci1
@@ -63,7 +63,6 @@ rm -rf feeds/packages/net/v2ray-geodata
 rm -rf feeds/luci/themes/luci-theme-argon
 
 cd package
-
 git clone https://github.com/f8q8/luci-app-autoreboot.git 
 cd ..
 
@@ -87,7 +86,7 @@ git clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall2.git
 git clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall.git
 #mosdns
 # git clone -b v5 --depth 1 https://github.com/sbwml/luci-app-mosdns.git
-git clone --depth=1 https://github.com/fw876/helloworld.git
+#git clone --depth=1 https://github.com/fw876/helloworld.git
 #git clone https://github.com/kevinCSDN/lua-maxminddb.git  #git lua-maxminddb 依赖
 #git clone https://github.com/qqhpc/jerrykuku-luci-app-vssr.git
 #git clone --depth=1 https://github.com/cfxy2010/luci-app-turboacc.git
